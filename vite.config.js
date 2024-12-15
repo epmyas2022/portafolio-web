@@ -4,16 +4,15 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => {
 
-  plugins: [
-    vue(),
-  ],
-  base: '',
-  resolve: {
-  
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+  return {
+    plugins: [vue()],
+    base: mode === 'production' ? 'portafolio-web' : '/',
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url))
+      }
     }
   }
 })
