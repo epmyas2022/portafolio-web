@@ -1,0 +1,21 @@
+{
+  "title": "example data of posts",
+  "count": 2,
+  "posts": [
+    {
+      "id": 1,
+      "title": "¡Bienvenidos!",
+      "user": "@epmyas2022",
+      "HTML": "Bienvenidos a mi portafolio profesional. Soy un desarrollador full stack con experiencia en tecnologías modernas y pasión por crear soluciones eficientes y escalables. Este espacio es una muestra de mi trabajo, habilidades y proyectos destacados. No dudes en enviarme un <a class='text-pink-600 font-bold' href='mailto:castillo20182017@gmail.com'>mensaje</a> si estás interesado en colaborar o discutir una oportunidad profesional. ¡Estoy emocionado por conectar contigo!</p><br /><img src=\"https://images.unsplash.com/photo-1527689368864-3a821dbccc34?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\" alt=\"Escritorio de trabajo con código\" />",
+      "pinned": true,
+      "date": "2021-01-01T00:00:00.000Z",
+      "tags": [
+        "👨‍💻 Full Stack Developer",
+        "🌟 Desarrollador",
+        "🚀 Bienvenida"
+
+      ]
+    }
+
+  ]
+}
