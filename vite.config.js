@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [vue()],
-    base: mode === 'production' ? 'portafolio-web' : '/',
+    base: mode === 'production' ? '/portafolio-web/' : '/',
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url))
