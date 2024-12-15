@@ -19,7 +19,7 @@ Proyecto de portafolio web personal realizado con Vue 3 y Tailwind CSS que muest
 Primero clona el repositorio 📋
 
 ```bash
-git clone
+git clone https://github.com/epmyas2022/portafolio-web.git
 ```
 
 Instalamos las dependencias 📦
