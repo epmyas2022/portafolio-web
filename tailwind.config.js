@@ -2,6 +2,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ["./src/**/*.{html,js,vue}"],
+  darkMode: 'selector',
   theme: {
     screens:{
       'galaxy': {'max': '280px'},

@@ -1,5 +1,5 @@
 <template>
-  <div class="hover:bg-gray-50 lg:p-4 p-2 rounded-lg">
+  <div class="hover:bg-gray-50 lg:p-4 p-2 rounded-lg dark:hover:bg-gray-500/10">
     <div class="pl-14 text-gray-500 text-sm mb-2 absolute top-5 md:static md:top-0">
       <span v-if="pin" class="mdi mdi-pin"> Pinned cheep</span>
     </div>
@@ -13,16 +13,15 @@
           <p class="font-light text-xs">• {{ formateDate(date) }}</p>
         </div>
         <div class="flex gap-2 flex-wrap mt-2">
-        <div v-for="tag in tags" :key="tag" class="bg-gray-300/70 px-4 py-1 rounded-full mt-2 ">
+        <div v-for="tag in tags" :key="tag" class="bg-gray-300/70 dark:bg-gray-300/30 px-4 py-1 rounded-full mt-2 ">
           <p class="font-semibold lg:text-sm text-xs">{{ tag }}</p>
         </div>
       </div>
       </div>
     </div>
-    <br />
     <!-- Post card content -->
 
-    <div class="md:pl-16 pl-2">
+    <div class="md:pl-16 pl-2 mt-3">
       <h1 class="font-bold lg:text-2xl text-lg mb-2">{{ title }}</h1>
 
       <p class="leading-relaxed text-balance" v-html="html"></p>

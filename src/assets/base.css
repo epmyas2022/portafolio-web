@@ -5,4 +5,25 @@ body {
   font-family: 'Onest', sans-serif;
   display: flex;
   justify-content: center;
+
+}
+
+html.dark body{
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+
+html::-webkit-scrollbar {
+  width: 7px;
+  background-color: whitesmoke;
+}
+
+html.dark::-webkit-scrollbar {
+  background-color: #2d3648;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgb(219 39 119 );
+  border-radius: 5px;
 }

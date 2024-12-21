@@ -1,5 +1,5 @@
 <template>
-  <div class="relative h-72 overflow-hidden background-scene after:bg-sky-200">
+  <div class="relative h-72 overflow-hidden background-scene after:bg-sky-200  dark:after:bg-sky-950">
     <div
       class="absolute top-4 bottom-0 left-0 right-0 clouds-content animate_delay_2 flex gap-2 z-40"
     >

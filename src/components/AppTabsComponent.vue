@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="flex font-bold lg:text-base text-sm text-gray-700">
+    <div class="flex font-bold lg:text-base text-sm text-gray-700 dark:text-gray-400">
       <button
         v-for="item in data"
         :key="item"
         @click="loadContent(item?.id)"
-        :class="'flex-grow hover:bg-gray-100 p-2 relative  ' + (item?.selected ? 'selected' : '')"
+        :class="'flex-grow hover:bg-gray-100 p-2 relative dark:hover:bg-gray-500/10  ' + (item?.selected ? 'selected' : '')"
       >
         {{ item.title }}
       </button>

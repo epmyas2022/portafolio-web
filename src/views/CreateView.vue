@@ -43,5 +43,3 @@ const enviar = () => {
 }
 </script>
   
-  <style>
-</style>

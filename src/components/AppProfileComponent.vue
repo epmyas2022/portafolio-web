@@ -4,7 +4,7 @@
       <PaperPlane class="z-0" />
     </div>
 
-    <div class="-translate-y-20 lg:pl-20 lg:pr-20 z-50">
+    <div class="-translate-y-20 lg:px-20 z-50">
       <div class="flex justify-between">
         <img
           class="rounded-full w-40 border-black border-4"
@@ -14,7 +14,7 @@
 
         <div class="flex items-end">
           <a
-            class="bg-pink-600 p-2 lg:text-base text-sm rounded-full text-white border-transparent hover:border-black border-4"
+            class="bg-pink-600 p-2 lg:text-base text-sm rounded-full text-white border-transparent hover:border-black border-4 dark:hover:border-white"
             target="_blank"
             href="https://www.linkedin.com/in/isaac-castillo-b4a213225/"
           >
@@ -28,11 +28,11 @@
           Isaac Castillo
           <span class="mdi mdi-check-decagram text-pink-600"></span>
         </h1>
-        <p class="text-base text-gray-600 mb-1">¡Vamos a construir algo increíble juntos! 🌐✨</p>
-        <p class="text-base text-gray-600">Desarrollador Web - Frontend - Backend - Movil.</p>
+        <p class="text-base text-gray-600 mb-1 dark:text-gray-400">¡Vamos a construir algo increíble juntos! 🌐✨</p>
+        <p class="text-base text-gray-600 dark:text-gray-400">Desarrollador Web - Frontend - Backend - Movil.</p>
 
         <br />
-        <div class="flex flex-wrap lg:gap-4 gap-2 text-gray-500 lg:text-base text-xs">
+        <div class="flex flex-wrap lg:gap-4 gap-2 text-gray-500 lg:text-base text-xs dark:text-gray-400">
           <p>
             <span class="mdi mdi-briefcase"></span>
             Disponible

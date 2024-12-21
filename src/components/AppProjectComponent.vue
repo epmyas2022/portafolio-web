@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-2xl p-4 bg-white flex flex-col gap-2 border border-gray-100">
+  <div class="rounded-2xl p-4 bg-white flex flex-col gap-2 border border-gray-100  dark:bg-black/40">
     <div class="flex gap-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@
       <h2 class="font-bold">{{ props.title }}</h2>
     </div>
 
-    <p class="text-gray-600">
+    <p class="text-gray-600 dark:text-gray-400">
         {{ props.description }}
     </p>
 
