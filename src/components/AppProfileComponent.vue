@@ -7,9 +7,9 @@
     <div class="-translate-y-20 lg:px-20 z-50">
       <div class="flex justify-between">
         <img
-          class="rounded-full w-40 border-black border-4"
+          class="rounded-full aspect-square w-40 border-black border-4"
           src="https://unavatar.io/github/epmyas2022"
-          alt=""
+          alt="Profile github"
         />
 
         <div class="flex items-end">

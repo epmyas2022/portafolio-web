@@ -8,18 +8,18 @@ export const useTabsStore = defineStore('tabs', () => {
     {
       id: 1,
       selected: true,
-      title: 'Feed',
+      title: 'Explorar',
       content: markRaw(FeedView)
     },
     {
       id: 2,
-      title: 'About',
+      title: 'Sobre mi',
       content: markRaw(AboutView)
     },
  
     {
       id: 3,
-      title: 'Proyects',
+      title: 'Proyectos',
       content: markRaw(ProjectsView)
     }
   ])

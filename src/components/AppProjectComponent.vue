@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-2xl p-4 bg-white flex flex-col gap-2 border border-gray-100  dark:bg-black/40">
+  <div class="rounded-2xl p-4 bg-white flex flex-col gap-2 border border-gray-100 dark:bg-black/40">
     <div class="flex gap-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,15 +18,21 @@
     </div>
 
     <p class="text-gray-600 dark:text-gray-400">
-        {{ props.description }}
+      {{ props.description }}
     </p>
 
-    <a :href="props.link" class="text-pink-500 underline">Ver más</a>
+    <div class="flex justify-end gap-2">
+      <template v-for="language in props.languages" :key="language.name">
+        <component :is="language.icon" :size="25" stroke="1.6"  />
+      </template>
+    </div>
+
+    <a :href="props.link" class="text-pink-500 underline w-fit">Ver más</a>
   </div>
 </template>
 
 <script setup>
- const props = defineProps({
+const props = defineProps({
   title: {
     type: String,
     required: true
@@ -37,6 +43,11 @@
   },
   link: {
     type: String,
+    required: true
+  },
+
+  languages: {
+    type: Array,
     required: true
   }
 })
