@@ -1,5 +1,13 @@
 import { nextTick, ref } from 'vue'
 
+const promiseResult = async (callback) => {
+  try {
+    return await callback
+  } catch (error) {
+    console.error('Error:', error)
+    return null
+  }
+}
 export default function useChat() {
   const message = ref('')
   const messages = ref([])
@@ -12,32 +20,38 @@ export default function useChat() {
     if (message.value.trim() === '') return
 
     pending.value = true
-    
+
     const mensageText = message.value
 
     addMessage(message.value, true, false)
     addMessage('', false, true)
 
-    scrollToBottom()
-
     message.value = ''
 
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/chat/about-me`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        message: mensageText,
-        cursor: cursor.value
+    const response = await promiseResult(
+      fetch(`${import.meta.env.VITE_API_URL}/chat/about-me`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: mensageText,
+          cursor: cursor.value
+        })
       })
-    })
+    )
+
+    if (!response) {
+      messages.value.splice(messages.value.length - 1, 1)
+      addMessage('Lo siento, por favor intenta de nuevo.', false, false)
+      pending.value = false
+      return
+    }
     const data = await response.json()
     cursor.value = data?.cursor
 
     messages.value.splice(messages.value.length - 1, 1)
     addMessage(data?.chat?.message, false, false)
-    scrollToBottom()
     pending.value = false
   }
 
@@ -57,6 +71,8 @@ export default function useChat() {
       isUser,
       pending
     })
+
+    scrollToBottom()
   }
 
   const toggleChat = () => {
