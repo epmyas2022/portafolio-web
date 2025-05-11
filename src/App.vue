@@ -1,5 +1,6 @@
 <script setup>
 import AppProfileComponent from './components/AppProfileComponent.vue'
+import AppChat from './components/AppChat.vue'
 import { ModalsContainer } from 'vue-final-modal'
 import { usePostStore } from './stores/post'
 import { LocalPostDatasource } from './views/datasources/localPostDatasourceImpl'
@@ -15,6 +16,7 @@ usePostStore().loadRespository(new PostRepositoryImpl(new LocalPostDatasource())
 
 <template>
   <div class="w-full dark:text-white">
+    <AppChat />
     <div
       class="sticky top-0 left-0 z-50 right-0 flex justify-between items-center p-4 dark:bg-black/5 bg-white/60 backdrop-blur-sm"
     >
@@ -29,7 +31,6 @@ usePostStore().loadRespository(new PostRepositoryImpl(new LocalPostDatasource())
       <header class="flex-col justify-center w-full">
         <app-profile-component />
       </header>
-
       <RouterView />
     </div>
     <ModalsContainer />

@@ -21,7 +21,7 @@
     </div>
     <!-- Post card content -->
 
-    <div class="md:pl-16 pl-2 mt-3">
+    <div class="md:pl-16 pl-2 mt-3 pr-2 md:pr-16">
       <h1 class="font-bold lg:text-2xl text-lg mb-2">{{ title }}</h1>
 
       <p class="leading-relaxed text-balance" v-html="html"></p>
