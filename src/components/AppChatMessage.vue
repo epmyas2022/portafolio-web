@@ -1,16 +1,22 @@
 <template>
-    <div class="flex justify-start" v-if="!isUser">
-        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-2" v-if="!pending">
-            <p class="text-md text-pretty space-y-4" v-html="marked(message)"></p>
+    <div class="flex justify-start items-end gap-2" v-if="!isUser">
+        <img src="https://unavatar.io/github/epmyas2022" alt="Isaac" class="w-8 h-8 rounded-full border-2 border-gray-200 dark:border-gray-700 flex-shrink-0" />
+        <div v-if="!pending" class="bg-white dark:bg-gray-800 rounded-2xl rounded-bl-sm px-4 py-3 shadow-md border border-gray-100 dark:border-gray-700 max-w-[85%]">
+            <p class="text-sm leading-relaxed text-gray-800 dark:text-gray-200" v-html="marked(message)"></p>
         </div>
-        <p v-else class="text-md  text-gray-400 italic">Escribiendo
-            <span class="animate-typing animate-pulse font-bold text-lg"></span>
-        </p>
+        <div v-else class="flex items-center gap-2 bg-white dark:bg-gray-800 rounded-2xl rounded-bl-sm px-4 py-3 shadow-md border border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-600 dark:text-gray-400">Escribiendo</span>
+            <div class="flex gap-1">
+                <span class="w-2 h-2 bg-pink-500 rounded-full animate-bounce" style="animation-delay: 0ms"></span>
+                <span class="w-2 h-2 bg-pink-500 rounded-full animate-bounce" style="animation-delay: 150ms"></span>
+                <span class="w-2 h-2 bg-pink-500 rounded-full animate-bounce" style="animation-delay: 300ms"></span>
+            </div>
+        </div>
     </div>
 
     <div v-else class="flex justify-end">
-        <div class="bg-pink-600 text-white rounded-lg p-2">
-            <p class="text-md">{{ message }}</p>
+        <div class="bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-2xl rounded-br-sm px-4 py-3 shadow-lg max-w-[85%]">
+            <p class="text-sm leading-relaxed">{{ message }}</p>
         </div>
     </div>
 </template>

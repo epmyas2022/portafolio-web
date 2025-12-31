@@ -1,7 +1,21 @@
 {
   "title": "example data of posts",
-  "count": 2,
+  "count": 3,
   "posts": [
+    {
+      "id": 3,
+      "title": "¡Adiós 2025! 🎆",
+      "user": "@epmyas2022",
+      "HTML": "¡Hoy es el último día del año! 🎊 Ha sido un año increíble lleno de aprendizaje, desafíos y crecimiento profesional. He trabajado en proyectos emocionantes, aprendido nuevas tecnologías y conectado con personas maravillosas.<br /><br />Quiero agradecerte por visitar mi portafolio y por el tiempo que has dedicado a conocer mi trabajo. Cada proyecto, cada línea de código y cada experiencia me ha ayudado a ser el desarrollador que soy hoy.<br /><br />¡Que el 2026 venga cargado de nuevos retos, oportunidades y éxitos para todos! 🚀✨ Nos vemos el próximo año con más proyectos, más código y más pasión por la tecnología.<br /><br /><strong>¡Feliz Año Nuevo! 🎉🥂</strong><br /><br /><img src=\"https://images.unsplash.com/photo-1467810563316-b5476525c0f9?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\" alt=\"Celebración de Año Nuevo\" />",
+      "pinned": true,
+      "date": "2025-12-31T23:59:00.000Z",
+      "tags": [
+        "🎆 Año Nuevo",
+        "💭 Reflexión",
+        "🎉 Celebración",
+        "👋 Despedida"
+      ]
+    },
     {
       "id": 1,
       "title": "¡Bienvenidos!",

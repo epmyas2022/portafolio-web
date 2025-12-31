@@ -24,7 +24,7 @@
       </div>
 
       <div>
-        <h1 class="font-bold lg:text-4xl text-2xl mt-2 mb-2">
+        <h1 class="font-bold lg:text-4xl text-2xl mt-2 mb-2 bg-gradient-to-r from-pink-300 via-pink-600 dark:from-pink-100 dark:via-pink-400  text-transparent bg-clip-text">
           Isaac Castillo
           <span class="mdi mdi-check-decagram text-pink-600"></span>
         </h1>

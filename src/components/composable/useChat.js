@@ -27,9 +27,9 @@ export default function useChat() {
     addMessage('', false, true)
 
     message.value = ''
-
+console.log(import.meta.env.VITE_API_URL)
     const response = await promiseResult(
-      fetch(`${import.meta.env.VITE_API_URL}/chat/about-me`, {
+      fetch(`${import.meta.env.VITE_API_URL}/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ export default function useChat() {
     )
 
     if (!response) {
-      messages.value.splice(messages.value.length - 1, 1)
+      messages.value.splice(- 1, 1)
       addMessage('Lo siento, por favor intenta de nuevo.', false, false)
       pending.value = false
       return
@@ -50,8 +50,8 @@ export default function useChat() {
     const data = await response.json()
     cursor.value = data?.cursor
 
-    messages.value.splice(messages.value.length - 1, 1)
-    addMessage(data?.chat?.message, false, false)
+    messages.value.splice(- 1, 1)
+    addMessage(data?.response, false, false)
     pending.value = false
   }
 

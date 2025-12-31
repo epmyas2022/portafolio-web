@@ -27,7 +27,7 @@ usePostStore().loadRespository(new PostRepositoryImpl(new LocalPostDatasource())
         <IconTheme :isDark="isDark" :size="26" />
       </button>
     </div>
-    <div style="max-width: 900px" class="lg:px-12 p-5 flex flex-col items-center mx-auto">
+    <div style="max-width: 1000px" class="lg:px-12 p-5 flex flex-col items-center mx-auto">
       <header class="flex-col justify-center w-full">
         <app-profile-component />
       </header>
