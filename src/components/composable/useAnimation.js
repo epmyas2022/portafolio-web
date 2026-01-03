@@ -9,11 +9,11 @@ export default function useAnimation() {
       },
       enter: (el, done) => {
         gsap.to(el, {
-          height: `35rem`,
+          height: `38rem`,
           opacity: 1,
           duration: 0.5,
           onComplete: () => {
-            el.style.height = '35rem'
+            el.style.height = '38rem'
             el.style.overflow = 'visible'
             done()
           }

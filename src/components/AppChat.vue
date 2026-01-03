@@ -22,7 +22,7 @@
     >
       <div
         v-show="open"
-        class="absolute bottom-0 right-0 left-0 md:right-4 md:bottom-4 md:left-auto bg-white dark:bg-gray-900 flex flex-col justify-between rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 w-full md:w-[32rem] h-[38rem] overflow-hidden backdrop-blur-xl"
+        class="absolute bottom-0 right-0 left-0 md:right-4 md:bottom-4 md:left-auto bg-white dark:bg-gray-900 flex flex-col justify-between rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 w-full md:w-[32rem] h-[40rem] overflow-hidden backdrop-blur-xl"
       >
         <!-- Chat header -->
         <AppChatHeader @closeChat="toggleChat"></AppChatHeader>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- Chat input -->
-        <div class="p-4 border-t dark:border-gray-800 bg-white dark:bg-gray-900">
+        <div class="p-4 rounded-b-2xl border border-gray-200 dark:border-gray-700 dark:border-t-gray-800 bg-white dark:bg-gray-900">
           <AppChatSuggestions
             :suggestions="suggestions"
             @suggestionSelected="(suggestion) => (message = suggestion)"
