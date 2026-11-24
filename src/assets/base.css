@@ -1,29 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;600;700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/3d');
+@import './tokens.css';
+@import '@fontsource/onest/400.css';
+@import '@fontsource/onest/500.css';
+@import '@fontsource/onest/700.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
 
 body {
-  font-family: 'Onest', sans-serif;
-  display: flex;
-  justify-content: center;
-
+  display: block !important;
+  background-color: var(--color-ink);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--fs-text-md);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-html.dark body{
-  background-color: #1a202c;
-  color: #e2e8f0;
+#app {
+  width: 100%;
+  min-height: 100svh;
 }
 
-
-html::-webkit-scrollbar {
-  width: 7px;
-  background-color: whitesmoke;
+::selection {
+  background-color: var(--color-lime);
+  color: var(--color-ink);
 }
 
-html.dark::-webkit-scrollbar {
-  background-color: #2d3648;
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--color-ink);
 }
 
-html::-webkit-scrollbar-thumb {
-  background-color: rgb(219 39 119 );
-  border-radius: 5px;
+::-webkit-scrollbar-thumb {
+  background-color: #2c2c2c;
+  border: 2px solid var(--color-ink);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-lime);
+}
+
+/* === STEPPED 8-BIT PIXEL BOX BORDERS === */
+.box-pixel {
+  position: relative;
+  border: 3px solid var(--color-white);
+  box-shadow:
+    4px 4px 0 0 var(--color-ink),
+    6px 6px 0 0 var(--color-white);
+}
+
+.box-pixel-lime {
+  position: relative;
+  background-color: var(--color-lime);
+  color: var(--color-ink);
+  border: 3px solid var(--color-ink);
+  box-shadow: 6px 6px 0 0 var(--color-white);
+}
+
+@keyframes bubble-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pixel-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

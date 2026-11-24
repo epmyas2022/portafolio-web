@@ -1,0 +1,33 @@
+:root {
+  /* === JLD2ND INSPIRED HIGH-CONTRAST 8-BIT PALETTE === */
+  --color-ink: #121212;
+  --color-ink-elevated: #1a1a1a;
+  --color-lime: #ceff00;
+  --color-white: #ffffff;
+  --color-cream: #eee7d5;
+  --color-heart: #ee3b3e;
+  --color-gold: #f6c53a;
+  --color-muted: #a0a0a0;
+
+  /* === TYPOGRAPHY (MAX 2 FAMILIES: DISPLAY HEADLINE + 8-BIT PIXEL) === */
+  --font-heading: 'Onest', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-pixel: 'Silkscreen', monospace;
+
+  /* === FLUID DISPLAY SCALE === */
+  --fs-display-2xl: clamp(3.25rem, 4.8vw, 5.125rem);
+  --fs-display-lg: clamp(2.65rem, 4vw, 4.4rem);
+  --fs-display-md: clamp(2.2rem, 3.2vw, 3.6rem);
+  --fs-display-sm: clamp(1.5rem, 2.2vw, 2.25rem);
+  --fs-text-lg: clamp(1.05rem, 1.25vw, 1.25rem);
+  --fs-text-md: clamp(0.95rem, 1.05vw, 1.1rem);
+  --fs-text-sm: 0.875rem;
+
+  /* === LAYOUT === */
+  --page-gutter: 40px;
+}
+
+@media (max-width: 991px) {
+  :root {
+    --page-gutter: 18px;
+  }
+}
